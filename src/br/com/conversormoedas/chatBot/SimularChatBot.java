@@ -1,6 +1,8 @@
-public class Digitacao {
+package br.com.conversormoedas.chatBot;
 
-    public void simularDigitacao () {
+public class SimularChatBot {
+
+    public static void chatBot(String mensagem) {
         for (int i = 0; i < 3; i++) {
             System.out.print("\u001B[32mDigitando ");
             for (int j = 0; j < 3; j++) {
@@ -13,5 +15,6 @@ public class Digitacao {
             }
             System.out.print("\r");
         }
+        System.out.println(mensagem);
     }
 }
