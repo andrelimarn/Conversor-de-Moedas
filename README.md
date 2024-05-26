@@ -25,4 +25,4 @@ Desenvolvimento de um aplicativo conversor de moedas, interação do usuário vi
 - Github
 
 # :earth_americas: Onde me achar  
-# ![Linkedin Badge](https://img.shields.io/badge/-André_Lima-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andrelimarn)
+# [![Linkedin Badge](https://img.shields.io/badge/-André_Lima-blue?style=flat-square&logo=Linkedin&logoColor=white&link=https://www.linkedin.com/in/andrelimarn)](https://www.linkedin.com/in/andrelimarn)
