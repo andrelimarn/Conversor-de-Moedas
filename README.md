@@ -1,6 +1,6 @@
 ![image](https://github.com/andrelimarn/Conversor-de-Moedas/assets/66094434/5a809c13-8b1a-479d-9665-7eacf6ad2c0b)
 
-# Desafio Backend java Turma 06 - ONE Alura
+# Desafio Backend Java Turma 06 - ONE Alura
 
 Desenvolvimento de um aplicativo conversor de moedas, interação do usuário via terminal. A conversão é feita em tempo real via uma API.
 
@@ -16,7 +16,7 @@ Desenvolvimento de um aplicativo conversor de moedas, interação do usuário vi
 
 ![Captura de tela 2024-05-26 001657](https://github.com/andrelimarn/Conversor-de-Moedas/assets/66094434/07ac02fa-5a64-4245-852e-4b24aee5e63c)
 
-# 📖 Conhecimentos colocados em prática
+# 📖 Conhecimentos Colocados em Prática
 
 - Programação java orientada a objetos
 - Consumo da API
