@@ -4,7 +4,7 @@ public class SimularChatBot {
 
     public static void chatBot(String mensagem) {
         for (int i = 0; i < 3; i++) {
-            System.out.print("\u001B[32mDigitando ");
+            System.out.print("\u001B[37mDigitando ");
             for (int j = 0; j < 3; j++) {
                 System.out.print(".");
                 try {
@@ -15,6 +15,6 @@ public class SimularChatBot {
             }
             System.out.print("\r");
         }
-        System.out.println(mensagem);
+        System.out.println("\u001B[33m"+mensagem);
     }
 }

@@ -5,6 +5,7 @@ import br.com.conversormoedas.model.DadosCoversorApi;
 import br.com.conversormoedas.model.TabelaMoedas;
 import com.google.gson.Gson;
 
+import java.text.DecimalFormat;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
@@ -21,8 +22,9 @@ public class Conversor {
         String valor;
         SimularChatBot.chatBot("Digite o valor que você quer converter");
         Scanner escolhaValor = new Scanner(System.in);
-        valor = escolhaValor.nextLine();
-        var json = API.obterDados(ENDERECO + APIKEY + "/pair/" + moedaBase + "/" + moedaAlvo + "/" + valor.replace(",", "."));
+        valor = escolhaValor.next();
+        var json = API.obterDados(ENDERECO + APIKEY + "/pair/" + moedaBase + "/" +
+                                  moedaAlvo + "/" +  valor.replace(",", "."));
 
         Gson gson = new Gson();
         DadosCoversorApi dados = gson.fromJson(json, DadosCoversorApi.class);
@@ -30,7 +32,8 @@ public class Conversor {
         String resultadoConversao = ("""
                %s %s é igual a %s %s
                ----------------------------------------------------------------
-               """.formatted(valor, moedas.moedas(moedaBase), dados.conversion_result(), moedas.moedas(moedaAlvo)));
+               """.formatted(valor,moedas.moedas(moedaBase), new DecimalFormat("#.##")
+                  .format(Double.parseDouble(dados.conversion_result())), moedas.moedas(moedaAlvo)));
 
         SimularChatBot.chatBot(resultadoConversao);
         logConversoes.add(resultadoConversao);
@@ -40,8 +43,9 @@ public class Conversor {
     }
 
     public void imprimeLog () {
-        SimularChatBot.chatBot("Essas foram as conversões que você fez:");
+        SimularChatBot.chatBot("\u001B[34mEssas foram as conversões que você fez:\n");
         logConversoes.forEach(System.out::println);
+        SimularChatBot.chatBot("Escolha uma opção se quiser fazer outra conversão, ou 10 para encerrar a conversa");
     }
 
 }

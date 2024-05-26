@@ -10,7 +10,7 @@ public class Principal {
 
         Conversor converterMoeda = new Conversor();
 
-        System.out.printf("""
+        System.out.printf("\u001B[34m"+"""
                        +----------------------------------------------------------+
                        | Escolha uma opção:                                       |
                        |                                                          |
